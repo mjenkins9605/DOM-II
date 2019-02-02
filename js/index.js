@@ -21,6 +21,7 @@ mainNav.addEventListener('mouseup', (event) => {
 let logoHeading = document.querySelector('.logo-heading');
 logoHeading.addEventListener('click', (event) => {
     logoHeading.style.color = 'red';
+    event.stopPropagation();
 })
 
 let topImage = document.querySelector('img');
@@ -33,9 +34,9 @@ docWheel.addEventListener('wheel', (event) => {
     docWheel.style.backgroundColor = 'teal';
 })
 
-let textColor = document.querySelector('p');
+let textColor = document.querySelector('body');
 textColor.addEventListener('click', (event) => {
-    textColor.style.color = 'yellow';
+    event.target.style.color = 'yellow';
 })
 
 let sunButton = document.getElementsByClassName('btn')[0];
@@ -54,9 +55,14 @@ islandButton.addEventListener('click', (event) => {
 })
 
 
-let pushKeyClear = document.querySelector('body', 'p', 'img');
+let pushKeyClear = document.querySelector('body', 'img');
 pushKeyClear.addEventListener('keydown', (event) => {
     pushKeyClear.style.backgroundColor = '';
     textColor.style.color = '';
     topImage.style.border = '';
 })
+
+let prevDef = document.querySelector('a');
+prevDef.addEventListener('click', (event) => {
+event.preventDefault();
+});
