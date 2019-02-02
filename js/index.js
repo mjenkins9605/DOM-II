@@ -3,9 +3,23 @@
 
 
 
+let mainNav = document.querySelector('.main-navigation');
+let logoHead = document.querySelector('.logo-heading');
+let navLink = document.querySelectorAll('.nav-link');
+
+mainNav.addEventListener('mousedown', (event) => {
+    mainNav.style.backgroundColor = 'green';
+    logoHead.style.fontSize = '.5em';
+    navLink.forEach(navAnchor => navAnchor.style.fontSize = '2em');;
+});
+mainNav.addEventListener('mouseup', (event) => {
+    mainNav.style.backgroundColor = '';
+    logoHead.style.fontSize = '';
+    navLink.forEach(navAnchor => navAnchor.style.fontSize = '');;
+});
 
 let logoHeading = document.querySelector('.logo-heading');
-logoHeading.addEventListener('mousedown', (event) => {
+logoHeading.addEventListener('click', (event) => {
     logoHeading.style.color = 'red';
 })
 
@@ -19,7 +33,10 @@ docWheel.addEventListener('wheel', (event) => {
     docWheel.style.backgroundColor = 'teal';
 })
 
-
+let textColor = document.querySelector('p');
+textColor.addEventListener('click', (event) => {
+    textColor.style.color = 'yellow';
+})
 
 let sunButton = document.getElementsByClassName('btn')[0];
 sunButton.addEventListener('click', (event) => {
@@ -34,4 +51,12 @@ mtnButton.addEventListener('click', (event) => {
 let islandButton = document.getElementsByClassName('btn')[2];
 islandButton.addEventListener('click', (event) => {
     alert('Dream On!')
+})
+
+
+let pushKeyClear = document.querySelector('body', 'p', 'img');
+pushKeyClear.addEventListener('keydown', (event) => {
+    pushKeyClear.style.backgroundColor = '';
+    textColor.style.color = '';
+    topImage.style.border = '';
 })
