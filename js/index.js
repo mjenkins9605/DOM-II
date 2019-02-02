@@ -2,14 +2,21 @@
 
 
 
-// let funButton = document.getElementsByClassName('.btn')[2];
-// funButton.addEventListener('click', (event) => {
-//     alert('You are all signed up!')
-// })
+
 
 let logoHeading = document.querySelector('.logo-heading');
 logoHeading.addEventListener('mousedown', (event) => {
     logoHeading.style.color = 'red';
+})
+
+let topImage = document.querySelector('img');
+topImage.addEventListener('dblclick', (event) => {
+    topImage.style.border = "5px solid red";
+})
+
+let docWheel = document.querySelector('body');
+docWheel.addEventListener('wheel', (event) => {
+    docWheel.style.backgroundColor = 'teal';
 })
 
 
