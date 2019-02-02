@@ -62,7 +62,12 @@ pushKeyClear.addEventListener('keydown', (event) => {
     topImage.style.border = '';
 })
 
-let prevDef = document.querySelector('a');
+let prevDef = document.querySelector('a'); //if there was a link it would stop it from leaving the webpage
 prevDef.addEventListener('click', (event) => {
-event.preventDefault();
+    event.preventDefault();
+});
+
+let foot = document.querySelector('footer');
+foot.addEventListener('click', (event) => {
+    TweenMax.to("footer", 1, { rotation: 360, backgroundColor: "black" });
 });
