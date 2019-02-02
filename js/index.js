@@ -69,5 +69,5 @@ prevDef.addEventListener('click', (event) => {
 
 let foot = document.querySelector('footer');
 foot.addEventListener('click', (event) => {
-    TweenMax.to("footer", 1, { rotation: 360, backgroundColor: "black" });
+    TweenMax.to("footer", 2.5, { rotation: 360, backgroundColor: "black", ease: SlowMo.ease.config(0.1, 2, false)});
 });
