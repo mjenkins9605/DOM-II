@@ -1,3 +1,4 @@
+Michael Jenkins
 # DOM II - Event Exploration
 
   
